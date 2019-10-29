@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Visual Analytics</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <div class="container">
+        <br>
+        <h1 class="font-weight-bold">En Colombia, la cantidad de cacao producida por hectárea varía según el Departamento donde se cultiva
+        </h1>
+        <br>
+        <h5>Valentina Chacón Buitrago</h5>
+        <h5>201630833</h5>
+        <br>
+        <h2>Objetivos:</h2>
+        <ul>
+            <li>Crear una visualización de árbol o red</li>
+            <li>Identificar insights de la visualización anterior</li>
+            <li>Hacer una abstracción de las preguntas guía: What?, Why? y How?</li>
+        </ul>
+
+        <h2>Fuente de datos:</h2>
+        <ul>
+            <li><a href="https://www.datos.gov.co/Agricultura-y-Desarrollo-Rural/Producci-n-en-toneladas/guu5-ndq6">Datos abiertos Colombia</a></li>
+        </ul>
+        <h2>Visualización:</h2>
+    </div>
+    <div class="container col-8 px-0 py-0">
+        <div class='tableauPlaceholder' id='viz1572282126498'><noscript><a href='#'><img alt=' ' 
+            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;ProduccindeCacao&#47;Hoja2&#47;1_rss.png' 
+            style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                <param name='embed_code_version' value='3' /> 
+                <param name='site_root' value='' />
+                <param name='name' value='ProduccindeCacao&#47;Hoja2' />
+                <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;ProduccindeCacao&#47;Hoja2&#47;1.png' /> 
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='filter' value='publish=yes' /></object></div>                
+        <script type='text/javascript'>                    var divElement = document.getElementById('viz1572282126498');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <p class="font-italic">Autora: Valentina Chacón Buitrago</p>
+    </div>
+
+
+    <div class="container my-5 col-8">
+        <h2>Análisis:</h2>
+        <br>
+        <h2 class="font-weight-bold">What?</h2>
+        <p>La página de datos abiertos permite descargar el dataset en formato csv, que posteriormente debe ser convertido a formato xlsx. Del dataset se tiene que es de tipo TABLA que cuenta con atributos e items. </p>
+        <h5> Atributos: </h5>
+        <p>Los atributos son propiedades específicas que pueden ser medidas, observadas y registradas. De acuerdo a esto y los datos recuperados, es posible identificar 4 atributos. Estos atributos tienen las siguientes características:</p>
+
+        <table class="tg" border="1">
+            <tr>
+                <th class="tg-uca5">Atributo</th>
+                <th class="tg-0lax">Tipo</th>
+                <th class="tg-0lax">Clasificación</th>
+                <th class="tg-0lax">Descripción</th>
+                <th class="tg-0lax">Valores posibles</th>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Departamento</td>
+                <td class="tg-0lax">Categórico</td>
+                <td class="tg-0lax">NaN</td>
+                <td class="tg-0lax">Departamento perteneciente a Colombia</td>
+                <td class="tg-0lax">Santander, Arauca, Antioquia</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Municipio</td>
+                <td class="tg-0lax">Categórico</td>
+                <td class="tg-0lax">NaN</td>
+                <td class="tg-0lax">Municipio perteneciente a un Departamento</td>
+                <td class="tg-0lax">Turbo, Tame, Rionegro</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Producción</td>
+                <td class="tg-0lax">Ordenado</td>
+                <td class="tg-0lax">Cuantitativo, Secuencial</td>
+                <td class="tg-0lax">Cantidad (en toneladas) de cacao producido por un Municipio</td>
+                <td class="tg-0lax">10699,2966,19705</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Área Cosechada</td>
+                <td class="tg-0lax">Ordenado</td>
+                <td class="tg-0lax">Cuantitativo, Secuencial</td>
+                <td class="tg-0lax">Área (en hectáreas) de terreno donde se cosecha el cacao</td>
+                <td class="tg-0lax">43000,4200,9260</td>
+            </tr>
+
+
+        </table>
+    </div>
+
+
+
+    <div class="container my-5 col-8">
+        <h2 class="font-weight-bold">Why</h2>
+        <p>Por medio de la visualización se busca comunicar tres tareas.</p>
+        <h5> Tarea Primaria: </h5>
+        <ol>
+            <li>Resumir (Query-> Summarize) las correlaciones (Attributes->Many->Correlation) que existen entre el área, en hectareas, cosechada y la cantidad, en toneladas, de cacao producidas en cada municipio.</li>
+        </ol>
+
+        <h5> Tareas Secundarias: </h5>
+        <ol>
+            <li>Identificar(Query-> Identify) la distribución (Attributes->One->Distribution) de área para la producción de cacao en el país de acuerdo al departamento. Con esto se tiene cuáles son los departamentos que disponen de mayor área, en comparación al resto, para el cultivo del cacao.</li>
+
+            <li>Determinar(Search-> Lookup) cuál es el municipio (Attributes -> One -> Extremes) dónde es posible cultivar la mayor cantidad de cacao en la menor extensión de tierra.</li>
+        </ol>
+
+    </div>
+    <div class="container my-5 col-8">
+        <h2 class="font-weight-bold">How?</h2>
+        <p>
+            <h6>Marcas</h6>
+                <ul>
+                    <li>Puntos: Los puntos muestran un municipio perteneciente a un departamento.</li>
+                    <li>Área: Esta marca determina el área cosechada en cacao para un municipio específico.</li>
+                </ul>
+    
+            <h6>Canales</h6>
+                <ul>
+                    <li>Saturación del color: Permite determinar que tanta producción tuvo el área delimitada.</li>
+                    <li>Área: Esta marca determina el área cosechada en cacao para un municipio específico.</li>
+                </ul>
+
+            <h6>Encode</h6>
+                 <ul>
+                    <li> <p>Se muestran los datos en una configuración "separate order and align". Se ubican los municipios dentro de su respectivo departamento ordenados de acuerdo a su área total de cosecha. </p></li>
+                    <li><p>Se usa la saturación de color para determinar que tanta producción de cacao tuvo un municipio. Esta saturación muestra una escala azul donde los tonos fuertes denotan las mayores cantidades y a medida que se aclara el tono se llega a una menor producción.</p></li>
+                </ul>
+                   
+            <h6>Manipulate</h6>
+                <ul>
+                    <li> <p>Se tiene una visualización interactiva dónde por medio de un select se puede obtener información especifica correspondiente al área seleccionada. En mayor detalle, la información presentada incluye el departamento, municipio, el área cosechada en hectareas y la producción en toneladas de cacao.</p></li>
+                </ul>
+        </p>
+    </div>
+    <br>
+</body>
+
+</html>
